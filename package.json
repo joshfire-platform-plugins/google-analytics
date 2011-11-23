@@ -1,0 +1,26 @@
+{
+	"name":"google-analytics",
+	"fullName":"Google Analytics",
+	"version":"0.0.1",
+	"keywords": [
+       "google",
+       "analytics",
+       "stats",
+       "metrics",
+       "statistics"
+   ],
+   "joshfire":{
+
+   		"hooks":["build"],
+   
+   		"options":{
+			"schema":{
+				"accountid":{
+					"type":"string",
+					"title":"Google Analytics ID",
+					"required":true
+				}
+			}
+		}
+   }
+}
