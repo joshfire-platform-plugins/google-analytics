@@ -1,10 +1,10 @@
 module.exports = {
-	"startfile":function(adminOptions,html,callback) {
+	"startfile":function(html,params,callback) {
 
 		callback(null,html.replace(/<\/head>/i,
 			'<script type="text/javascript">'
 			+ 'var _gaq = _gaq || [];'
-			+ "_gaq.push(['_setAccount', '"+adminOptions.accountid+"']);"
+			+ "_gaq.push(['_setAccount', '"+params.options.accountid+"']);"
 		    + "_gaq.push(['_trackPageview']);"
 
 		    + "(function() {"
