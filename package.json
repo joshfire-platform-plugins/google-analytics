@@ -10,9 +10,11 @@
        "statistics"
    ],
    "joshfire":{
-
+		"images":{
+ 	    	"small":"http://i.imgur.com/NomLe.png",
+ 	    	"big":"http://i.imgur.com/NomLe.png"
+ 	  	},
    		"hooks":["build"],
-   
    		"options":{
 			"schema":{
 				"accountid":{
