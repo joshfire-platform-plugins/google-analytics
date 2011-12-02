@@ -9,6 +9,7 @@
        "metrics",
        "statistics"
    ],
+   "description":"Track your audience with smart, friendly and free analytics",
    "joshfire":{
 
    		"hooks":["build"],
