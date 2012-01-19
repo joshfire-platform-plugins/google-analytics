@@ -15,7 +15,7 @@
  	    	"small":"http://i.imgur.com/NomLe.png",
  	    	"big":"http://i.imgur.com/NomLe.png"
  	  	},
-   		"hooks":["build"],
+   		"hooks":["startfile"],
    		"options":{
 			"schema":{
 				"accountid":{
