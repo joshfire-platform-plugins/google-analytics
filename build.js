@@ -1,6 +1,7 @@
 module.exports = {
   "startfile":function(runtime,params,callback) {
 
+    //TODO config location on page
     callback(null,params["content"].replace(/<\/head>/i,
       '<script type="text/javascript">'+
         'var _gaq = _gaq || [];'+
