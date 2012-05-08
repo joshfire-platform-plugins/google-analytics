@@ -1,7 +1,7 @@
 {
 	"name":"googleanalytics",
 	"fullName":"Google Analytics",
-	"version":"0.0.1",
+	"version":"1.0.0",
 	"keywords": [
        "google",
        "analytics",
@@ -9,13 +9,23 @@
        "metrics",
        "statistics"
    ],
-   "description":"Track your audience with smart, friendly and free analytics",
+   "description":"Track your audience with smart analytics",
    "joshfire":{
 		"images":{
  	    	"small":"marketing/image-small.png",
  	    	"big":"marketing/image-small.png"
  	  	}, 	  	
    		"hooks":["startfile"],
+   		"premium":true,
+   		"bundles":{
+   			"base":{
+   				"onetime":{
+   					"eur":5,
+   					"usd":7
+   				},
+   				"title":"One-time setup"
+   			}	
+   		},
    		"options":{
 			"schema":{
 				"accountid":{
