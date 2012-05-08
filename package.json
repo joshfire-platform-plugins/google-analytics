@@ -17,7 +17,7 @@
  	  	}, 	  	
    		"hooks":["startfile"],
    		"premium":true,
-   		"bundles":{
+   		"prices":{
    			"base":{
    				"onetime":{
    					"eur":5,
