@@ -1,9 +1,11 @@
-// DEPRECATED (2012-07-12): to be removed once new add-ons system is up
-module.exports = {
-  "startfile":function(runtime,params,callback) {
-
-    //TODO config location on page
-    callback(null,params["content"].replace(/<\/head>/i,
+/**
+ * @fileoverview Appends the right script before the end of the <head> tag
+ *
+ * TODO: config location on page
+ */
+define([], function () {
+  return function (runtime, params, callback) {
+    callback(null, params.content.replace(/<\/head>/i,
       '<script type="text/javascript">'+
         'var _gaq = _gaq || [];'+
         "_gaq.push(['_setAccount', '"+params.options.accountid+"']);"+
@@ -15,5 +17,5 @@ module.exports = {
           "var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);"+
         "})();"+
       "</script></head>"));
-  }
-};
+  };
+});
