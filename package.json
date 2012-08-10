@@ -16,16 +16,6 @@
  	    	"big":"marketing/image-small.png"
  	  	}, 	  	
    		"hooks":["startfile"],
-   		"premium":true,
-   		"prices":{
-   			"base":{
-   				"onetime":{
-   					"eur":5,
-   					"usd":7
-   				},
-   				"title":"One-time setup"
-   			}	
-   		},
    		"options":{
 			"schema":{
 				"accountid":{
