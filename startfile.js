@@ -5,6 +5,20 @@
  */
 define([], function () {
   return function (runtime, params, callback) {
+    // In order to insert the script, we need to make sure:
+    // - that an accountid has been provided,
+    // - that we are not running the plugin in a ios/android cordova
+    //   environment, in which case we will use the native plugin.
+    if ( !params.options || !params.options.accountid ||
+          (params.deploy && params.deploy.flags &&
+            ( !params.deploy.flags.web ||
+              params.deploy.flags.cordova &&
+                ( params.deploy.flags.ios === true ||
+                  params.deploy.flags.android === true ))))
+    {
+      return callback(null, params.content);
+    }
+
     callback(null, params.content.replace(/<\/head>/i,
       '<script type="text/javascript">'+
         'var _gaq = _gaq || [];'+
