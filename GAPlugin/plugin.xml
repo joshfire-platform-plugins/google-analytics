@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.adobe.plugins.GAPlugin"
+    version="2.1.1">
+
+    <name>GAPlugin</name>
+    
+	<description>
+		This plugin allows you to post usage information to your Google Analytics account.
+	</description>
+    
+    <asset src="www/GAPlugin.js" target="GAPlugin.js" />
+    
+	<engines>
+      <engine name="cordova" version=">=2.0.0" />
+    </engines>	
+    
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="plugins">
+            <plugin name="GAPlugin" value="com.adobe.plugins.GAPlugin"/>
+        </config-file>
+
+        <source-file src="src/android/GAPlugin.java"
+                target-dir="src/com/adobe/plugins" />
+        <source-file src="src/android/libGoogleAnalyticsV2.jar"
+                target-dir="libs" />
+    </platform>
+    
+    <!-- ios -->
+    <platform name="ios">
+		<!-- Cordova < 2.3 -->
+        <plugins-plist key="GAPlugin" string="GAPlugin" />
+                    
+		<!-- Cordova >= 2.3 -->
+		<config-file target="config.xml" parent="plugins">
+			<plugin name="GAPlugin" value="GAPlugin"/>
+		</config-file>  
+                    
+        <source-file src="src/ios/GAPlugin.m" />
+		<source-file src="src/ios/GoogleAnalytics.a" framework="true" />
+		
+        <header-file src="src/ios/GAITransactionItem.h" />
+        <header-file src="src/ios/GAITransaction.h" />
+        <header-file src="src/ios/GAITracker.h" />
+        <header-file src="src/ios/GAITrackedViewController.h" />
+        <header-file src="src/ios/GAI.h" />
+        <header-file src="src/ios/GAPlugin.h" />
+		
+        <framework src="CoreData.framework" />
+        <framework src="SystemConfiguration.framework" />
+    </platform>
+</plugin>
