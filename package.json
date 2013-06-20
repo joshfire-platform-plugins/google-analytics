@@ -15,7 +15,12 @@
  	    	"small":"marketing/image-small.png",
  	    	"big":"marketing/image-small.png"
  	  	}, 	  	
-   		"hooks":["startfile"],
+   		"hooks":[
+   		  "startfile",
+   		  "injectCordovaPluginJS",
+   		  "xcodeproj",
+   		  "androidproj"
+   		],
    		"options":{
 			"schema":{
 				"accountid":{
