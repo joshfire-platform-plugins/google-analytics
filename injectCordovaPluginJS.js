@@ -1,7 +1,7 @@
 define(['woodman'], function (woodman) {
 
   return function (runtime, params, callback) {
-    var logger = woodman.getLogger('add-on', 'google-analytics', 'injectCordovaPluginJS');
+    var logger = woodman.getLogger('add-on google-analytics injectCordovaPluginJS');
     logger.log('started');
 
     var jsFilePath = './GAPlugin/www/GAPlugin.js';
