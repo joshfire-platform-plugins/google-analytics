@@ -12,30 +12,22 @@ define([], function () {
       '<script type="text/javascript">\n'+
       '(function () {' +
         'var onDeviceReady = function () {' +
-          'var permission = window.localStorage.getItem(\'google-analytics-permission\');' +
-          '/* Note: A request for permission is REQUIRED by google. */' +
-          'if ( permission === \'ok\') {' +
-            'permissionCallback(1);' +
-          '} else if (permission === \'nok\') {' +
-            'permissionCallback(-1);' +
-          '} else {' +
-            'navigator.notification.confirm(\''+ params.config.app.name + ' would like your permission to collect usage data. No personal or user identifiable data will be collected.\', permissionCallback, \'Attention\', \'Allow,Deny\');' +
-          '}' +
-        '};' +
-
-        'var permissionCallback = function (button) {' +
-          'if (button === 1) {' +
-            'window.localStorage.setItem(\'google-analytics-permission\', \'ok\');' +
+          'if (window.plugins && window.plugin.gaPlugin) {' +
             'window.plugins.gaPlugin.init(function (result) {' +
-              'window.console.log(\'Google Analytics, Initialization result, \' + result);' +
+              'window.console.log(\'Google Analytics, Initialization result\');' +
+              'window.console.log(result);' +
+              'window.plugins.gaPlugin.trackPage(function () {' +
+                'window.console.log(\'Google Analytics, Start Page tracking OK\');' +
+              '}, function (error) {' +
+                'window.console.error(\'Google Analytics, Start Page tracking error:\');' +
+                'window.console.error(error);' +
+              '}, "start")' +
             '}, function (error) {' +
-              'window.console.error(\'Google Analytics\', \'Initialization error\', error);' +
+              'window.console.error(\'Google Analytics\', \'Initialization error\');' +
+              'window.console.error(error);' +
             '}, \'' + params.options.accountid + '\', 10);' +
-          '} else {' +
-            'window.localStorage.setItem(\'google-analytics-permission\', \'nok\');' +
           '}' +
         '};' +
-
         'Joshfire.factory.onReady(onDeviceReady);' +
       '})();\n' +
       '</script></body>');
