@@ -1,7 +1,7 @@
 {
-	"name":"googleanalytics",
-	"fullName":"Google Analytics",
-	"version":"1.1.0",
+	"name": "googleanalytics",
+	"fullName": "Google Analytics",
+	"version": "1.1.1",
 	"keywords": [
        "google",
        "analytics",
@@ -9,26 +9,22 @@
        "metrics",
        "statistics"
    ],
-   "description":"Track your audience with smart analytics",
-   "joshfire":{
-		"images":{
- 	    	"small":"marketing/image-small.png",
- 	    	"big":"marketing/image-small.png"
- 	  	}, 	  	
-   		"hooks":[
+   "description": "Track your audience with smart analytics",
+   "joshfire": {
+   		"hooks": [
    		  "startfile",
    		  "injectCordovaPluginJS",
    		  "xcodeproj",
    		  "androidproj"
    		],
-   		"options":{
-			"schema":{
-				"accountid":{
-					"type":"string",
-					"title":"Google Analytics ID",
-					"required":true
-				}
-			}
-		}
+   		"options": {
+    		"schema": {
+    			"accountid": {
+    				"type": "string",
+    				"title": "Google Analytics ID",
+    				"required": true
+    			}
+    		}
+		  }
    }
 }
