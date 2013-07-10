@@ -1,7 +1,7 @@
 define(['woodman'], function (woodman) {
   return function (runtime, params, callback) {
 
-    var logger = woodman.getLogger('add-on google-analytics androidproj');
+    var logger = woodman.getLogger('add-on google-analytics plugman');
     logger.log('started');
 
     runtime.plugmanInstall('./GAPlugin', function (err) {

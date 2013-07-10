@@ -13,9 +13,7 @@
    "joshfire": {
    		"hooks": [
    		  "startfile",
-   		  "injectCordovaPluginJS",
-   		  "xcodeproj",
-   		  "androidproj"
+   		  "plugman"
    		],
    		"options": {
     		"schema": {
