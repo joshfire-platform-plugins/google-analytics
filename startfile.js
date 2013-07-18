@@ -12,7 +12,7 @@ define([], function () {
       '<script type="text/javascript">\n'+
       '(function () {' +
         'var onDeviceReady = function () {' +
-          'if (window.plugins && window.plugin.gaPlugin) {' +
+          'if (window.plugins && window.plugins.gaPlugin) {' +
             'window.plugins.gaPlugin.init(function (result) {' +
               'window.console.log(\'Google Analytics, Initialization result\');' +
               'window.console.log(result);' +
