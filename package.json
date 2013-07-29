@@ -1,7 +1,7 @@
 {
 	"name": "googleanalytics",
 	"fullName": "Google Analytics",
-	"version": "1.2.1",
+	"version": "1.2.2",
 	"keywords": [
        "google",
        "analytics",
@@ -22,7 +22,14 @@
     				"title": "Google Analytics ID",
     				"required": true
     			}
-    		}
+    		},
+        "form": [
+          {
+            "type": "help",
+            "helpvalue": "Check the documentation for setting up a <a href=\"https://support.google.com/analytics/answer/1086338?hl=en&ref_topic=1726910\">web app</a> or a <a href=\"https://support.google.com/analytics/answer/2614741\">native app</a> property.<br>If you use both a web app and a native app, you will need to do the following:<br><form><li>Create a new property (website or app), or use an existing property,</li><li>Select the property in the admin menu,</li><li>Click on the <code>+ New Profile</code> button,</li><li>Select Web Site or App, depending on what your property is missing.</li></ul>"
+          },
+          "accountid"
+        ]
 		  }
    }
 }
